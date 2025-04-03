@@ -1,0 +1,534 @@
+/*estilo geral*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #fff5f4;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #a4d9b5;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #81b492;
+    transform: scale(1.05);
+
+}
+
+h2.titulo {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+h2.titulo span {
+    color: #81b492;
+    font-size: 35px;
+
+}
+
+/* Fim do estilo geral */
+
+/* Estilo do cabeçalho */
+
+header {
+    padding: 40px 4% 4%;
+
+
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    /* Garante que o menu fique acima de outros elementos */
+    background-color: #fff5f4;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    transition: 2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #a4d9b5;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.btn-abrir-menu{
+    display: none;
+}
+
+/* Estilo Menu Mobile */
+.menu-mobile {
+    background-color: #fff5f4;
+    height: 100vh; /* Alterado para 100vh para preencher a tela */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0;
+    overflow: hidden; /* Alterado de auto para hidden */
+    transition: width 0.3s ease;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.btn-abrir-menu{
+    font-size: 30px;
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #81b492;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-mobile nav ul li a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 9%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #a4d9b5;
+    color: rgb(255, 255, 255);
+}
+
+/* Overlay do menu */
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.26);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: none;
+}
+
+
+/* Estilo topo do site */
+
+section.topo-do-site {
+    padding: 55px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: black;
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #81b492;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: black;
+    margin: 40px 0;
+    text-align: justify;
+}
+
+.img-topo-site #Techno {
+    height: auto;
+    /* Mantém a proporção original da imagem */
+    width: 300px;
+    border-radius: 8px;
+    /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra para profundidade */
+}
+
+/* Fim topo do site */
+
+/* Estilo Sobre */
+
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+
+}
+
+.sobre .txt-sobre {
+    color: black;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #81b492;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #a4d9b5;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.img-sobre #Psyduck {
+    height: auto;
+    /* Mantém a proporção original da imagem */
+    width: 400px;
+    border-radius: 8px;
+    /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra para profundidade */
+}
+
+/* Estilo Tecnologias */
+section.tecnologias {
+    padding: 40px 4%;
+    margin-bottom: 80px;
+}
+
+section.tecnologias .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+    gap: 35px;
+    /* Espaçamento entre os itens */
+    justify-content: center;
+}
+
+.tecnologias .tecnologias-box {
+    color: #a4d9b5;
+    padding: 55px;
+    border: 2px solid #81b492;
+    border-radius: 20px;
+    flex: 1 1 200px;
+    /* Ajuste para permitir flexibilidade na largura */
+    max-width: 200px;
+    /* Ajuste para uma largura máxima adequada em telas menores */
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.tecnologias .tecnologias-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #a4d9b5bd;
+    cursor: pointer;
+}
+
+.tecnologias .tecnologias-box i {
+    font-size: 70px;
+
+}
+
+.tecnologias .link-tecnologia{
+    color: #65c484;
+}
+/* .tecnologias .tecnologias-box h3{ 
+    
+}*/
+
+/* Fim Estilo Tecnologias */
+
+/* Estilo Portfólio */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #a4d9b581;
+}
+
+section.portfolio .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+    gap: 80px;
+    /* Espaçamento entre os itens */
+    justify-content: space-around;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 5s;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+/* Fim Estilo Portfólio */
+
+/* Estilo Formulário */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #81b49246;
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+    padding: 20px 15px;
+    color: #000000;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .btn-enviar {
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 120px;
+    transition: 2.5s;
+}
+
+/* form input::placeholder{ 
+    
+}*/
+/*  Fim Estilo Formulário */
+
+/* Estilização Footer */
+footer {
+    padding: 45px 4%;
+    box-shadow: 0 0 40px 10px #a4d9b581;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #093f21;
+}
+
+footer .line-footer p i {
+    color: #81b492;
+    font-size: 20px;
+}
+
+footer .line-footer p a {
+    text-decoration: none;
+    color: #81b492;
+}
+
+/* Fim Estilização Footer */
+
+/* Tornando o site responsivo */
+
+@media screen and (max-width: 1020px) {
+
+    /* Classes Gerais */
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    /* Cabeçalho */
+    .btn-contato {
+        display: none;
+    }
+
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    header nav.menu-desktop ul li {
+        display: none;
+    }
+
+    /* Topo do Site */
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        color: black;
+        font-size: 32px;
+    }
+
+    .img-topo-site #Techno {
+        width: 100%;
+    }
+
+    /* Estilo Tecnologias */
+    section.tecnologias {
+        padding: 40px 8%;
+    }
+
+    section.tecnologias .flex {
+        justify-content: center;
+    }
+
+    section.tecnologias .tecnologias-box {
+        flex: 1 1 100%;
+        /* Faz com que cada item ocupe 100% da largura disponível em telas menores */
+        max-width: 100%;
+        /* Garante que a largura máxima se ajuste em telas menores */
+        padding: 20px;
+    }
+
+    .tecnologias .tecnologias-box i {
+        font-size: 40px;
+        /* Ajuste o tamanho dos ícones para se adaptar melhor a telas menores */
+    }
+
+    /* Sobre */
+    selection.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /* Portfólio */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 60px;
+    }
+
+    /* Rodapé */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+}
