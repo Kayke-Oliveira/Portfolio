@@ -304,10 +304,6 @@ section.tecnologias .flex {
 .tecnologias .link-tecnologia{
     color: #65c484;
 }
-/* .tecnologias .tecnologias-box h3{ 
-    
-}*/
-
 /* Fim Estilo Tecnologias */
 
 /* Estilo Portfólio */
@@ -326,13 +322,45 @@ section.portfolio .flex {
 }
 
 .img-port {
-    width: 360px;
-    height: 460px;
+    font-size: 80px;
     background-size: cover;
     background-position: 100% 0%;
     border-radius: 8px;
     cursor: pointer;
     transition: 5s;
+}
+
+/* Centraliza os itens */
+.portfolio-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Cada conjunto (ícone + texto) */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo do ícone */
+.item i {
+    font-size: 40px;
+    color: #81b492;
+}
+
+/* Estilo do texto */
+.item p {
+    font-size: 18px;
+    color: #81b492 !important;
+    font-weight: bold;
+}
+
+.IconLink{
+    text-decoration: none;
+    color: #81b492;
 }
 
 .img-port:hover {
@@ -372,14 +400,26 @@ form textarea {
 
 form .btn-enviar {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-form .btn-enviar input[type=submit] {
+form .btn-enviar button[type=submit] {
     margin-top: 20px;
     font-weight: 700;
     cursor: pointer;
     width: 120px;
-    transition: 2.5s;
+    height: 40px;
+    transition: 0.3s;
+    background-color: #a4d9b5;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form .btn-enviar button[type=submit]:hover {
+    background-color: #a4d9b5;
 }
 
 /* form input::placeholder{ 
@@ -513,13 +553,45 @@ footer .line-footer p a {
     }
 
     .img-port {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         max-width: 360px;
         margin: 0 auto;
+        
     }
 
     section.portfolio .flex {
         gap: 60px;
+    }
+
+    /* Centraliza os itens */
+    .portfolio-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Cada conjunto (ícone + texto) */
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Estilo do ícone */
+    .item i {
+        font-size: 40px;
+        color: #81b492;
+    }
+
+    /* Estilo do texto */
+    .item p {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
     }
 
     /* Rodapé */
