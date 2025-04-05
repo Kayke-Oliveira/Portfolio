@@ -68,7 +68,7 @@ header {
 }
 
 header>.interface {
-    width: 100%; 
+    width: 100%;
     margin: 0 auto;
     padding: 10px 4%;
     display: flex;
@@ -80,7 +80,7 @@ header>.interface {
     right: 0;
     z-index: 1000;
     background-color: #fff5f4;
-    box-sizing: border-box;
+    box-sizing: border-box;
 
 }
 
@@ -104,20 +104,22 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-.btn-abrir-menu{
+.btn-abrir-menu {
     display: none;
 }
 
 /* Estilo Menu Mobile */
 .menu-mobile {
     background-color: #fff5f4;
-    height: 100vh; /* Alterado para 100vh para preencher a tela */
+    height: 100vh;
+    /* Alterado para 100vh para preencher a tela */
     position: fixed;
     top: 0;
     right: 0;
     z-index: 99999;
     width: 0;
-    overflow: hidden; /* Alterado de auto para hidden */
+    overflow: hidden;
+    /* Alterado de auto para hidden */
     transition: width 0.3s ease;
 }
 
@@ -125,7 +127,7 @@ header nav.menu-desktop ul li {
     width: 70%;
 }
 
-.btn-abrir-menu{
+.btn-abrir-menu {
     font-size: 30px;
     padding: 20px 5%;
 }
@@ -306,9 +308,10 @@ section.tecnologias .flex {
 
 }
 
-.tecnologias .link-tecnologia{
+.tecnologias .link-tecnologia {
     color: #65c484;
 }
+
 /* Fim Estilo Tecnologias */
 
 /* Estilo Portfólio */
@@ -363,7 +366,7 @@ section.portfolio .flex {
     font-weight: bold;
 }
 
-.IconLink{
+.IconLink {
     text-decoration: none;
     color: #81b492;
 }
@@ -485,7 +488,7 @@ footer .line-footer p a {
         display: none;
     }
 
-    .btn-abrir-menu{
+    .btn-abrir-menu {
         display: block;
     }
 
@@ -564,7 +567,7 @@ footer .line-footer p a {
         width: 100%;
         max-width: 360px;
         margin: 0 auto;
-        
+
     }
 
     section.portfolio .flex {
