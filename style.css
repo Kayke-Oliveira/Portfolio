@@ -60,23 +60,28 @@ h2.titulo span {
 /* Estilo do cabeçalho */
 
 header {
+    width: 100%;
     padding: 40px 4% 4%;
+    background-color: #fff5f4;
 
 
 }
 
 header>.interface {
+    width: 100%; 
+    margin: 0 auto;
+    padding: 10px 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 10px 0;
+    right: 0;
     z-index: 1000;
-    /* Garante que o menu fique acima de outros elementos */
     background-color: #fff5f4;
+    box-sizing: border-box;
+
 }
 
 header a {
